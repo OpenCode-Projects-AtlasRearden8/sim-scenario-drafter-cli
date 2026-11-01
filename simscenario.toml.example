@@ -1,0 +1,12 @@
+# simscenario config — optional. Copy to simscenario.toml to enable LLM drafting.
+# Works with any OpenAI-compatible endpoint, including local Ollama.
+#
+# SECURITY: no API keys go in this file, ever. For hosted endpoints, set
+# api_key_env to the exact NAME of an environment variable that holds the
+# key; the value itself is read from the environment at call time.
+
+[endpoint]
+base_url = "http://localhost:11434/v1"   # Ollama's OpenAI-compatible base URL
+model = "llama3.1:8b"                    # any model you have pulled in Ollama
+api_key_env = ""                         # empty for Ollama; e.g. "MY_API_KEY_ENV" for hosted
+timeout_seconds = 120
